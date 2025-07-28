@@ -1,0 +1,137 @@
+/* Base Reset and Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f1fdfb;
+  color: #333;
+  text-align: center; /* Centers all text inside body by default */
+}
+
+/* Header Styling */
+.header {
+  background: linear-gradient(135deg, #00796b, #004d40);
+  color: white;
+  padding: 3rem 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: #fff700;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #e0f7fa;
+}
+
+/* Grid Container for Form and Info */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Form and Info Box Styling */
+.form-section, .info-section {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings with Color */
+.form-section h2 {
+  color: #00897b;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.info-section h2 {
+  color: #00695c;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* Form Inputs */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #00695c;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #00bfa5;
+}
+
+/* Submit Button */
+button {
+  background-color: #00796b;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+/* Form Message */
+.form-message {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Info Section List */
+.info-section ol {
+  text-align: left;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* Footer */
+.footer {
+  background-color: #004d40;
+  color: white;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}

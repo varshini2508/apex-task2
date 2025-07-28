@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | ApexPlanet</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <header class="header">
+    <h1>Contact ApexPlanet</h1>
+    <p>Enhance your HTML, CSS, and JavaScript skills with this interactive form</p>
+  </header>
+
+  <main class="grid-container">
+    <section class="form-section">
+      <form id="contactForm" novalidate>
+        <h2>📩 <span style="color:#00897b;">Send Us a Message</span></h2>
+
+        <div class="form-group">
+          <label for="name">👤 Full Name</label>
+          <input type="text" id="name" name="name" placeholder="varshini" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">📧 Email Address</label>
+          <input type="email" id="email" name="email" placeholder="thonupunurivarshini@gmail.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">📝 Your Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+        </div>
+
+        <button type="submit">Send Message 🚀</button>
+        <p id="formMessage" class="form-message"></p>
+      </form>
+    </section>
+
+    <section class="info-section">
+      <h2>📚 <span style="color:#00695c;">What You'll Learn</span></h2>
+      <ol>
+        <li><strong>Build Forms with HTML & CSS</strong>: Learn to create beautiful input forms.</li>
+        <li><strong>Validate Forms with JavaScript</strong>: Ensure only correct data gets submitted.</li>
+        <li><strong>Make It Responsive</strong>: Use Flexbox & Grid to adapt to all devices.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 ApexPlanet Software Pvt Ltd. All rights reserved.
+  </footer>
+
+  <script>
+    // Form Validation Script
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const formMessage = document.getElementById('formMessage');
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (!name || !email || !message) {
+        formMessage.style.color = "red";
+        formMessage.textContent = "⚠️ Please fill in all fields.";
+        return;
+      }
+
+      if (!email.match(emailPattern)) {
+        formMessage.style.color = "red";
+        formMessage.textContent = "✉️ Please enter a valid email address.";
+        return;
+      }
+
+      formMessage.style.color = "green";
+      formMessage.textContent = "✅ Thank you! Your message has been sent.";
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
